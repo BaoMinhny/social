@@ -14,6 +14,7 @@ const SuggestUser = () => {
       try {
         const res = await fetch("/api/users/suggested")
         const data = await res.json();
+        // console.log(data)
         if(data.error){
           showToast("Error", data.error, "error"); 
         }
@@ -29,7 +30,7 @@ const SuggestUser = () => {
 
   return (
     <  >
-        <Text mb={4} fontWeight={"bold"}>
+        <Text mb={4} fontWeight={"bold"} textAlign={"left"}>
           Suggested user
         </Text>
         <Flex direction={"column"} gap={4}>
